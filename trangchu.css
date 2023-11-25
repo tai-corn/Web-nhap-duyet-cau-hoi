@@ -1,2 +1,72 @@
 
 
+* {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(Images/milky-way-2695569_1920.jpg);
+ font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;}
+
+h1 span {
+    color: #d40d0d;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+
+.menu-container ul {
+    list-style-type: none;
+    display: flex;
+    width: 500px;
+    align-items: center;justify-content: space-around;margin-right: 35px;
+}
+
+.menu-container > ul >li {
+    width: 100%;text-align: center;height: 42px;line-height: 42px;
+}
+.menu-container ul li > a {
+    text-decoration: none;
+    color: black;
+    
+}
+.menu-container > ul > li:hover  {
+    background-color: #d40d0d; color: white;
+} 
+.menucha {   
+ position: relative;width: 200px;
+}
+.menu-container .menudrop {
+    position: absolute;
+    top:100%;
+    color: black;
+    background-color: #ffffff;
+}
+.menudrop {
+    display: none;width: 125px;text-align: left;
+}
+.menudrop a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+.menucha:hover .menudrop {
+    display: block;
+}
+.menudrop a:hover {
+    background-color: #d40d0d;
+    color: white;
+}
