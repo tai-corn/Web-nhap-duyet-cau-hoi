@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="register.css">
-    <script src="Register.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <title>Document</title>
 </head>
 <body>
     <div class="wrapper">
-        <form action="">
+        <form action="" onsubmit="signup()">
             <h1>Register</h1>
             <div class="input-box">
-                <input type="text" placeholder="Tên đăng nhập" required>
+                <input type="text" placeholder="Tên đăng nhập" id="username" required>
                 <i class="bx bxs-user"></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="mật khẩu" required>
+                <input type="password" placeholder="mật khẩu" id="password" required>
                 <i class="bx bxs-lock-alt"></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="nhập lại mật khẩu" required>
+                <input type="password" placeholder="nhập lại mật khẩu" id="password2" required>
                 <i class="bx bxs-lock-alt"></i>
             </div>
-            <button  class="btn" >
-                Sign up
+            <button type="submit" class="btn">
+                Đăng ký
             </button>
         </form>
     </div>

@@ -7,6 +7,10 @@ function signup(e) {
         alert("Mật khẩu nhập lại không khớp với mật khẩu");
         return;
     }
+    if (localStorage.getItem(username)) {
+        alert("Tên đăng nhập đã tồn tại");
+        return;
+    }
     var user = {
         username: username,
         password: password,
@@ -20,16 +24,20 @@ function login(e) {
     event.preventDefault();
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
-    var user = localStorage.getItem(username);
-    if (!username) {
-        alert("Sai tên đăng nhập hoặc mật khẩu");
-        event.preventDefault();
-    }
-    var data = JSON.parse(user);
-    if (username === "" || password === "") {
+
+    if (!username || username === "" || !password || password === "") {
         alert("Vui lòng không để trống");
+        return;
     }
-    else if(username === data.username && password === data.password){
+
+    var user = localStorage.getItem(username);
+    if (!user) {
+        alert("Sai tên đăng nhập hoặc mật khẩu");
+        return;
+    }
+
+    var data = JSON.parse(user);
+    if(username === data.username && password === data.password){
         alert("Đăng nhập thành công");
         window.location.href = "Trangchu.html";
     }
